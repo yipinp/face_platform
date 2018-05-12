@@ -3,7 +3,7 @@
  *     Many others data sources will also be added in the future.
  *
  *     image_file                  queue
- *     image_dir     =>  process    =>  get_output_images queue
+ *     image_dir     =>  process    =>  get_output_images =>queue
  *     cameraId
  *
  *
@@ -12,7 +12,13 @@
  *
  *
  */
+#ifndef _DATA_SOURCE_H_
+#define _DATA_SOURCE_H_
+
+
 #include <iostream>
+#include <string>
+#include <queue>
 #include <opencv2/highgui.hpp>
 #include <opencv2/videoio.hpp>
 #include <opencv2/core.hpp>
@@ -24,11 +30,22 @@
 using namespace cv;
 using namespace std;
 
+typedef enum {
+    SINGLE_IMAGE,
+    DIR_SCAN_MODE,
+    VIDEO_CAMERA,
+} SOURCE_MODE;
+
+
+
 typedef struct {
-
-
-
-
+    //input source control
+    SOURCE_MODE mode;
+    string image_file;
+    string dir_name;
+    char camera_id;
+    //output image number setting
+    int batch_size;
 
 } data_source_params;
 
@@ -38,19 +55,28 @@ typedef struct {
 class data_source {
 
 public:
-    void set_image_file(const char *name);
-    void set_image_directory(const char *dir);
-    void set_camera_id(const int cameraId);
+    data_source(std::queue<Mat> *data_source_queue_out);
+    ~data_source();
+
+public:
+    //single file mode
+    void set_image_file(string image_name);
+
+    //dir scan mode
+    void set_directory(string dir_name);
+
+    //camera mode
+    void set_camera_id(char camera_id);
+
+    void set_batch_size(int size);
+
+    bool get_next_batch_images();
 
 
-
-
-
-
-
-
-
-
-
+private:
+    data_source_params params;
+    std::queue<Mat> *data_source_queue_out;
 
 };
+
+#endif
