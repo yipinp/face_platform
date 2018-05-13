@@ -16,6 +16,17 @@
 using namespace cv;
 using namespace std;
 
+#define MODE_BITS 2
+#define MODE_MASK ((1<<MODE_BITS) - 1)
+
+typedef enum {
+    SCALE = 1,
+    CROP,
+    FLIP,
+} PIPELINE_MODE;
+
+
+
 typedef struct {
     //scale
     Size scale_size;
@@ -24,6 +35,12 @@ typedef struct {
 
     //crop
     Rect crop_rect;
+
+    //flip
+    int flipcode; //0 : vertical flip, >0 : horizontal flip, <0 : rotation 180
+
+    //pipeline order
+    unsigned char order;// 2bit for one stage, lsb first
 
 } data_preprocess_params;
 
@@ -40,14 +57,21 @@ public:
     void set_scale_size(Size t);
     void set_scale_ratio(Size2d ratio);
     void set_scale_mode(int mode);
-    Mat image_scale(Mat frame_in);
+
     //crop
     void set_crop_rect(Rect t);
-    Mat image_crop(Mat frame_in);
-    Mat image_flip(Mat frame_in);
+
+    //flip
+    void set_image_flip(int flip_code);
+
+    //core
+    bool get_next_batch_images();
 
 private:
     void reset();
+    Mat image_scale(Mat frame_in);
+    Mat image_crop(Mat frame_in);
+    Mat image_flip(Mat frame_in);
 
 
 private:

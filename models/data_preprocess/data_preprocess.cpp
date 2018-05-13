@@ -16,9 +16,6 @@ data_preprocess::data_preprocess(std::queue<Mat> *data_source_queue, std::queue<
 
     reset();
 
-
-
-
 }
 
 data_preprocess::~data_preprocess() {
@@ -39,11 +36,13 @@ void data_preprocess::reset(){
 ************************************************/
 void data_preprocess::set_scale_size(Size t){
     params.scale_size = t;
+    params.order = (params.order << MODE_BITS) | SCALE;
 }
 
 void data_preprocess::set_scale_ratio(Size2d ratio)
 {
     params.scale_ratio = ratio;
+    params.order = (params.order << MODE_BITS) | SCALE;
 
 }
 
@@ -59,9 +58,65 @@ Mat data_preprocess::image_scale(Mat frame_in) {
     return scaleframe;
 }
 
+void data_preprocess::set_crop_rect(Rect t){
+    params.crop_rect = t;
+    params.order = (params.order << MODE_BITS) | CROP;
+
+}
+
+Mat data_preprocess::image_crop(Mat frame_in) {
+    return frame_in(params.crop_rect);
+}
+
+
+void data_preprocess::set_image_flip(int flip_code){
+    params.flipcode = flip_code;
+    params.order = (params.order << MODE_BITS) | FLIP;
+
+}
+
+Mat data_preprocess::image_flip(Mat frame_in) {
+    Mat frame;
+    flip(frame_in,frame,params.flipcode);
+    return frame;
+}
+
+
+bool data_preprocess::get_next_batch_images()
+{
+    Mat frame;
+    unsigned char order;
+
+    for(int i = 0; i < data_source_queue_in->size(); i++){
+        frame = data_source_queue_in->front();
+        data_source_queue_in->pop();
+        order = params.order;
+        //bypass mode
+        while(true){
+            if(order == 0){
+                data_preprocess_queue_out->push(frame);
+                break;
+            } else {
+                if (order & MODE_MASK == SCALE) {
+                    frame = image_scale(frame);
+                } else if (order & MODE_MASK == CROP) {
+                    frame = image_crop(frame);
+                } else if (order & MODE_MASK == FLIP) {
+                    frame = image_flip(frame);
+                }
+            }
+            order >= MODE_BITS;
+        }
+    }
+
+    return true;
+}
+
+
 
 
 #if  0
+
 
 int main (int argc, char **argv){
 
@@ -71,8 +126,8 @@ int main (int argc, char **argv){
     Size2d t(0.5,0.5);
     data_preprocess_module.set_scale_ratio(t);
     data_preprocess_module.set_scale_mode(1);
-    img1 = data_preprocess_module.image_scale(img);
-    imwrite("t2.jpg",img1);
+
+    data_preprocess_module.set_image_flip(0);
 
     return 1;
 }
