@@ -15,6 +15,8 @@
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
+#include <dlib/opencv.h>
+#include <dlib/image_io.h>
 
 using namespace dlib;
 using namespace std;
@@ -28,8 +30,11 @@ public:
     detection_alignment(std::queue<Mat> *data_source_queue_in,std::queue<Mat> *data_preprocess_queue_out);
 
 
+public:
+     bool dlib_face_detection_alignment(Mat image);
+
 private:
-     bool dlib_face_detection_alignment();
+    cv::Rect convert_dlib2cv_rectangle(dlib::rectangle rect);
 
 
 };
