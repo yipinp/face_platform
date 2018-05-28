@@ -1,4 +1,5 @@
 #include "detection_alignment.h"
+#include "common.h"
 
 detection_alignment::detection_alignment()
 {
@@ -13,16 +14,6 @@ detection_alignment::~detection_alignment()
 }
 
 
-cv::Rect detection_alignment::convert_dlib2cv_rectangle(dlib::rectangle rect)
-{
-    cv::Rect cv_rect;
-    cv_rect.x = rect.left();
-    cv_rect.y = rect.top();
-    cv_rect.width = rect.right() - rect.left();
-    cv_rect.height = rect.bottom() - rect.top();
-    return cv_rect;
-}
-
 
 bool detection_alignment::dlib_face_detection_alignment(Mat image)
 {
@@ -36,11 +27,20 @@ bool detection_alignment::dlib_face_detection_alignment(Mat image)
     cout <<"Number of faces detected:"<<faces.size()<<endl;
     cv::Rect rect;
 
+    std::vector<full_object_detection> shapes;
     for (int i = 0; i < faces.size(); i++){
+        full_object_detection shape = sp(dlib_img, faces[i]);
+        cout << "number of parts: "<< shape.num_parts() << endl;
+        shapes.push_back(shape);
+
         rect = convert_dlib2cv_rectangle(faces[i]);
         cv::rectangle(image,rect,Scalar(0,0,255),3,8,0);
 
     }
+
+    dlib::array<array2d<rgb_pixel> > face_chips;
+    extract_image_chips(dlib_img, get_face_chip_details(shapes), face_chips);
+
     namedWindow("faces",1);
     imshow("image",image);
     waitKey(10000);
@@ -52,7 +52,9 @@ bool detection_alignment::dlib_face_detection_alignment(Mat image)
 
 int main(int argc, char **argv)
 {
-    Mat img = imread("/home/pyp/face_app/face_platform/models/detection_alignment/multiple_faces.jpg",1);
+    //char imageName[256] = "/home/pyp/face_app/face_platform/models/detection_alignment/multiple_faces.jpg";
+    char imageName[256] = "/home/pyp/face_app/face_platform/models/detection_alignment/t2.jpeg";
+    Mat img = imread(imageName,1);
 
     detection_alignment *dlib_detector = new detection_alignment();
 

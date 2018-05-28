@@ -1,6 +1,5 @@
-#ifndef _DETECTION_ALIGNMENT_H_
-#define _DETECTION_ALIGNMENT_H_
-
+#ifndef _COMMON_H_
+#define _COMMON_H_
 #include <iostream>
 #include <string>
 #include <queue>
@@ -18,26 +17,16 @@
 #include <dlib/opencv.h>
 #include <dlib/image_io.h>
 
-using namespace dlib;
-using namespace std;
-using namespace cv;
 
-class detection_alignment {
-
-public:
-    detection_alignment();
-    ~detection_alignment();
-    detection_alignment(std::queue<Mat> *data_source_queue_in,std::queue<Mat> *data_preprocess_queue_out);
-
-
-public:
-     bool dlib_face_detection_alignment(Mat image);
-
-private:
-  //  cv::Rect convert_dlib2cv_rectangle(dlib::rectangle rect);
-
-
-};
+static cv::Rect convert_dlib2cv_rectangle(dlib::rectangle rect)
+{
+    cv::Rect cv_rect;
+    cv_rect.x = rect.left();
+    cv_rect.y = rect.top();
+    cv_rect.width = rect.right() - rect.left();
+    cv_rect.height = rect.bottom() - rect.top();
+    return cv_rect;
+}
 
 
 
