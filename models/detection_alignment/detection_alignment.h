@@ -17,6 +17,7 @@
 #include <dlib/image_processing.h>
 #include <dlib/opencv.h>
 #include <dlib/image_io.h>
+#include <dlib/image_transforms.h>
 
 using namespace dlib;
 using namespace std;
