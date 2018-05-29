@@ -20,9 +20,11 @@ bool detection_alignment::dlib_face_detection_alignment(Mat image)
     //cv_image<bgr_pixel> dlib_img(image);
     dlib::array2d<bgr_pixel> dlib_img;
     dlib::assign_image(dlib_img, dlib::cv_image<bgr_pixel>(image));
+    char model_name[256] = "/home/pyp/face_app/face_platform/models/detection_alignment/shape_predictor_68_face_landmarks.dat";
    // pyramid_up(dlib_img);
     frontal_face_detector detector = get_frontal_face_detector();
     shape_predictor sp;
+    deserialize(model_name) >> sp;
     std::vector<dlib::rectangle> faces = detector(dlib_img);
     cout <<"Number of faces detected:"<<faces.size()<<endl;
     cv::Rect rect;
@@ -40,7 +42,6 @@ bool detection_alignment::dlib_face_detection_alignment(Mat image)
 
     dlib::array<array2d<rgb_pixel> > face_chips;
     extract_image_chips(dlib_img, get_face_chip_details(shapes), face_chips);
-
     namedWindow("faces",1);
     imshow("image",image);
     waitKey(10000);
@@ -52,8 +53,8 @@ bool detection_alignment::dlib_face_detection_alignment(Mat image)
 
 int main(int argc, char **argv)
 {
-    //char imageName[256] = "/home/pyp/face_app/face_platform/models/detection_alignment/multiple_faces.jpg";
-    char imageName[256] = "/home/pyp/face_app/face_platform/models/detection_alignment/t2.jpeg";
+    char imageName[256] = "/home/pyp/face_app/face_platform/models/detection_alignment/multiple_faces.jpg";
+    //char imageName[256] = "/home/pyp/face_app/face_platform/models/detection_alignment/t4.png";
     Mat img = imread(imageName,1);
 
     detection_alignment *dlib_detector = new detection_alignment();
