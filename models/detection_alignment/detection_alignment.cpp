@@ -5,6 +5,20 @@ detection_alignment::detection_alignment()
 {
 
 
+
+}
+
+
+
+detection_alignment::detection_alignment(std::queue<Mat> *data_source_queue_in,
+                                         std::queue<Mat> *data_queue_out)
+                                        : img_queue_in(data_source_queue_in),
+                                          face_queue_out(data_queue_out)
+{
+
+
+
+
 }
 
 detection_alignment::~detection_alignment()
@@ -13,18 +27,30 @@ detection_alignment::~detection_alignment()
 
 }
 
+void detection_alignment::dlib_load_model(char *name)
+{
+
+    memcpy(dlib_model_name,name,256);
+}
+
+
+void detection_alignment::dlib_set_detector(FACE_DETECTOR_S detector)
+{
+    face_detector = detector;
+
+}
+
 
 
 bool detection_alignment::dlib_face_detection_alignment(Mat image)
 {
-    //cv_image<bgr_pixel> dlib_img(image);
     dlib::array2d<bgr_pixel> dlib_img;
     dlib::assign_image(dlib_img, dlib::cv_image<bgr_pixel>(image));
-    char model_name[256] = "/home/pyp/face_app/face_platform/models/detection_alignment/shape_predictor_68_face_landmarks.dat";
-   // pyramid_up(dlib_img);
+
+    pyramid_up(dlib_img);
     frontal_face_detector detector = get_frontal_face_detector();
     shape_predictor sp;
-    deserialize(model_name) >> sp;
+    deserialize(dlib_model_name) >> sp;
     std::vector<dlib::rectangle> faces = detector(dlib_img);
     cout <<"Number of faces detected:"<<faces.size()<<endl;
     cv::Rect rect;
@@ -36,18 +62,52 @@ bool detection_alignment::dlib_face_detection_alignment(Mat image)
         shapes.push_back(shape);
 
         rect = convert_dlib2cv_rectangle(faces[i]);
-        cv::rectangle(image,rect,Scalar(0,0,255),3,8,0);
+        cv::rectangle(toMat(dlib_img),rect,Scalar(0,0,255),3,8,0);
 
     }
 
     dlib::array<array2d<rgb_pixel> > face_chips;
     extract_image_chips(dlib_img, get_face_chip_details(shapes), face_chips);
-    namedWindow("faces",1);
-    imshow("image",image);
-    waitKey(10000);
 
+    if(face_queue_out != NULL){
+        for(int j = 0; j < face_chips.size(); j++){
+            face_queue_out->push(toMat(face_chips[j]));
+        }
+    }
+
+
+#if 0
+    namedWindow("faces",1);
+    Mat out_image;
+    out_image = toMat(face_chips[1]);
+    imshow("image",out_image);
+ //   imshow("image",toMat(dlib_img));
+    waitKey(10000);
+#endif
     return true;
 }
+
+
+void detection_alignment::face_detection_alignment()
+{
+    Mat image;
+    if (img_queue_in == NULL) return;
+    for(int i = 0; i < img_queue_in->size(); i++){
+        image = img_queue_in->front();
+        img_queue_in->pop();
+        switch(face_detector){
+            case DLIB_FACE:
+                dlib_face_detection_alignment(image);
+                break;
+            default:
+                break;
+        }
+
+    }
+}
+
+
+
 
 
 
@@ -55,11 +115,14 @@ int main(int argc, char **argv)
 {
     char imageName[256] = "/home/pyp/face_app/face_platform/models/detection_alignment/multiple_faces.jpg";
     //char imageName[256] = "/home/pyp/face_app/face_platform/models/detection_alignment/t4.png";
+    char model_name[256] = "/home/pyp/face_app/face_platform/models/detection_alignment/shape_predictor_68_face_landmarks.dat";
     Mat img = imread(imageName,1);
-
+#if 0
     detection_alignment *dlib_detector = new detection_alignment();
+    dlib_detector->dlib_load_model(model_name);
 
     dlib_detector->dlib_face_detection_alignment(img);
+#endif
 }
 
 

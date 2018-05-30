@@ -23,21 +23,34 @@ using namespace dlib;
 using namespace std;
 using namespace cv;
 
+typedef enum {
+    DLIB_FACE,
+
+
+} FACE_DETECTOR_S;
+
+
 class detection_alignment {
 
 public:
     detection_alignment();
     ~detection_alignment();
-    detection_alignment(std::queue<Mat> *data_source_queue_in,std::queue<Mat> *data_preprocess_queue_out);
+    detection_alignment(std::queue<Mat> *img_queue_in,std::queue<Mat> *face_queue_out);
 
 
 public:
-     bool dlib_face_detection_alignment(Mat image);
+    void dlib_load_model(char *name);
+    void dlib_set_detector(FACE_DETECTOR_S detector);
+    void face_detection_alignment();
 
 private:
-  //  cv::Rect convert_dlib2cv_rectangle(dlib::rectangle rect);
+    bool dlib_face_detection_alignment(Mat image);
 
-
+private:
+    char dlib_model_name[256];
+    std::queue<Mat> *img_queue_in;
+    std::queue<Mat> *face_queue_out;
+    FACE_DETECTOR_S face_detector;
 };
 
 
