@@ -41,6 +41,7 @@ public:
 
 
 public:
+    void dlib_load_model(char *name);
     void create_recognization(RECOGNIZATION_MODE  mode);
 
 private:
@@ -51,6 +52,7 @@ private:
     std::queue<Mat> *img_faces;
     std::vector<matrix<float,0,1>> *face_id;
     anet_type dlib_net;
+    char dlib_model_name[256];
 
 };
 #endif

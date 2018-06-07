@@ -23,13 +23,18 @@ recognization::~recognization()
 
 }
 
+void recognization::dlib_load_model(char *name)
+{
+    memcpy(dlib_model_name,name,256);
 
+
+}
 
 void recognization::create_recognization(RECOGNIZATION_MODE  mode)
 {
     switch(mode){
         case DLIB_DNN_RECOGNIZATION:
-            deserialize("/home/pyp/face_app/face_platform/models/recognization/dlib_face_recognition_resnet_model_v1.dat") >> dlib_net;
+            deserialize(dlib_model_name) >> dlib_net;
             break;
 
         default:
@@ -64,7 +69,7 @@ void recognization::dlib_recognization()
 }
 
 
-
+#if 0
 int main() {
 
 // The first thing we are going to do is load all our models.  First, since we need to
@@ -96,3 +101,4 @@ int main() {
 
     cout << "face descriptor for one face: " << trans(face_descriptors[0]) << endl;
 }
+#endif
