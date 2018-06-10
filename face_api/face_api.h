@@ -30,8 +30,11 @@ public:
     void set_input_source();
     void select_face_model();
 
+    void get_face_ids();
+    void compare_face_id();
+
 private:
-    void dlib_face_recognization();
+    void dlib_dnn_face_model();
 
 
 
