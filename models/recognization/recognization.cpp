@@ -9,7 +9,7 @@ recognization::recognization()
 
 }
 
-recognization::recognization(std::queue<Mat> *img_faces_in, std::vector<matrix<float,0,1>> *face_id_out)
+recognization::recognization(std::queue<cv::Mat> *img_faces_in, std::vector<matrix<float,0,1>> *face_id_out)
                 : img_faces(img_faces_in),
                   face_id(face_id_out)
 {
@@ -54,11 +54,14 @@ void recognization::create_recognization(RECOGNIZATION_MODE  mode)
 void recognization::dlib_recognization()
 {
     //read the face chips from detection and alignment and covert to dlib matrix
-    std::vector<matrix<rgb_pixel>> faces;
+    std::vector<matrix<dlib::rgb_pixel>> faces;
     matrix<dlib::rgb_pixel> img;
+    cv::Mat frame;
     for (int i = 0; i < img_faces->size(); i++){
-        assign_image(img,cv_image<rgb_pixel>(img_faces[i]));
-        faces.push_back(img);
+        frame = img_faces->front();
+        img_faces->pop();
+        assign_image(img,cv_image<dlib::rgb_pixel>(frame));
+        faces.push_back(move(img));
     }
 
     std::vector<matrix<float,0,1>> face_descriptors = dlib_net(faces);
@@ -67,6 +70,22 @@ void recognization::dlib_recognization()
     }
 
 }
+
+void recognization::dump_face_features() {
+    if(face_id == NULL) return;
+
+    std::vector<matrix<float,0,1>> temp = *face_id;
+    char baseName[] = "./dumps/recognization_dump";
+    char image_name[256];
+    for(int i =0; i < temp.size(); i ++)
+    {
+        sprintf(image_name,"%s_%d.txt",baseName,i);
+        cout<<temp[i]<<endl;
+    }
+}
+
+
+
 
 
 #if 0

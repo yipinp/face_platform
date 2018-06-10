@@ -125,33 +125,6 @@ detection_alignment/fast:
 	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/detection_alignment/CMakeFiles/detection_alignment.dir/build.make models/detection_alignment/CMakeFiles/detection_alignment.dir/build
 .PHONY : detection_alignment/fast
 
-detection_alignment.o: detection_alignment.cpp.o
-
-.PHONY : detection_alignment.o
-
-# target to build an object file
-detection_alignment.cpp.o:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/detection_alignment/CMakeFiles/detection_alignment.dir/build.make models/detection_alignment/CMakeFiles/detection_alignment.dir/detection_alignment.cpp.o
-.PHONY : detection_alignment.cpp.o
-
-detection_alignment.i: detection_alignment.cpp.i
-
-.PHONY : detection_alignment.i
-
-# target to preprocess a source file
-detection_alignment.cpp.i:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/detection_alignment/CMakeFiles/detection_alignment.dir/build.make models/detection_alignment/CMakeFiles/detection_alignment.dir/detection_alignment.cpp.i
-.PHONY : detection_alignment.cpp.i
-
-detection_alignment.s: detection_alignment.cpp.s
-
-.PHONY : detection_alignment.s
-
-# target to generate assembly for a file
-detection_alignment.cpp.s:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/detection_alignment/CMakeFiles/detection_alignment.dir/build.make models/detection_alignment/CMakeFiles/detection_alignment.dir/detection_alignment.cpp.s
-.PHONY : detection_alignment.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,9 +134,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... detection_alignment"
-	@echo "... detection_alignment.o"
-	@echo "... detection_alignment.i"
-	@echo "... detection_alignment.s"
 .PHONY : help
 
 

@@ -3,7 +3,7 @@
 
 detection_alignment::detection_alignment()
 {
-
+    reset();
 
 
 }
@@ -16,8 +16,15 @@ detection_alignment::detection_alignment(std::queue<Mat> *data_source_queue_in,
                                           face_queue_out(data_queue_out)
 {
 
+    reset();
 
 
+}
+
+void detection_alignment::reset()
+{
+    size = 0;
+    padding = 0;
 
 }
 
@@ -34,9 +41,11 @@ void detection_alignment::dlib_load_model(char *name)
 }
 
 
-void detection_alignment::dlib_set_detector(FACE_DETECTOR_S detector)
+void detection_alignment::dlib_set_detector(FACE_DETECTOR_S detector,unsigned long size_i, double padding_i)
 {
     face_detector = detector;
+    size = size_i;
+    padding = padding_i;
 
 }
 
@@ -44,7 +53,7 @@ void detection_alignment::dlib_set_detector(FACE_DETECTOR_S detector)
 
 bool detection_alignment::dlib_face_detection_alignment(Mat image)
 {
-    dlib::array2d<bgr_pixel> dlib_img;
+    dlib::array2d<rgb_pixel> dlib_img;
     dlib::assign_image(dlib_img, dlib::cv_image<bgr_pixel>(image));
 
     pyramid_up(dlib_img);
@@ -67,7 +76,11 @@ bool detection_alignment::dlib_face_detection_alignment(Mat image)
     }
 
     dlib::array<array2d<rgb_pixel> > face_chips;
-    extract_image_chips(dlib_img, get_face_chip_details(shapes), face_chips);
+    if (size == 0)
+        extract_image_chips(dlib_img, get_face_chip_details(shapes), face_chips);
+    else
+        extract_image_chips(dlib_img, get_face_chip_details(shapes,size,padding), face_chips);
+
 
     if(face_queue_out != NULL){
         for(int j = 0; j < face_chips.size(); j++){
@@ -106,10 +119,21 @@ void detection_alignment::face_detection_alignment()
     }
 }
 
+void detection_alignment::dump_images() {
+    if(face_queue_out == NULL) return;
 
+    std::queue<Mat> temp = *face_queue_out;
+    char baseName[] = "./dumps/detection_alignment_dump";
+    char image_name[256];
+    for(int i =0; i < temp.size(); i ++)
+    {
+        sprintf(image_name,"%s_%d.jpg",baseName,i);
+        imwrite(image_name,temp.front());
+        temp.pop();
+    }
+}
 
-
-
+#if 0
 
 int main(int argc, char **argv)
 {
@@ -124,7 +148,7 @@ int main(int argc, char **argv)
     dlib_detector->dlib_face_detection_alignment(img);
 #endif
 }
-
+#endif
 
 //
 //int main()

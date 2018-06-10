@@ -344,17 +344,26 @@ ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 //Value Computed by CMake
 data_preprocess_BINARY_DIR:STATIC=/home/pyp/face_app/face_platform/cmake-build-debug/models/data_preprocess
 
+//Dependencies for target
+data_preprocess_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 data_preprocess_SOURCE_DIR:STATIC=/home/pyp/face_app/face_platform/models/data_preprocess
 
 //Value Computed by CMake
 data_source_BINARY_DIR:STATIC=/home/pyp/face_app/face_platform/cmake-build-debug/models/data_source
 
+//Dependencies for target
+data_source_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 data_source_SOURCE_DIR:STATIC=/home/pyp/face_app/face_platform/models/data_source
 
 //Value Computed by CMake
 detection_alignment_BINARY_DIR:STATIC=/home/pyp/face_app/face_platform/cmake-build-debug/models/detection_alignment
+
+//Dependencies for target
+detection_alignment_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 detection_alignment_SOURCE_DIR:STATIC=/home/pyp/face_app/face_platform/models/detection_alignment
@@ -370,6 +379,9 @@ face_platform_SOURCE_DIR:STATIC=/home/pyp/face_app/face_platform
 
 //Value Computed by CMake
 recognization_BINARY_DIR:STATIC=/home/pyp/face_app/face_platform/cmake-build-debug/models/recognization
+
+//Dependencies for target
+recognization_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 recognization_SOURCE_DIR:STATIC=/home/pyp/face_app/face_platform/models/recognization

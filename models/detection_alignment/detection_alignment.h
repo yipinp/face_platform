@@ -40,17 +40,21 @@ public:
 
 public:
     void dlib_load_model(char *name);
-    void dlib_set_detector(FACE_DETECTOR_S detector);
+    void dlib_set_detector(FACE_DETECTOR_S detector,unsigned long size_i = 0, double padding_i = 0);
     void face_detection_alignment();
+    void dump_images();
 
 private:
     bool dlib_face_detection_alignment(Mat image);
+    void reset();
 
 private:
     char dlib_model_name[256];
     std::queue<Mat> *img_queue_in;
     std::queue<Mat> *face_queue_out;
     FACE_DETECTOR_S face_detector;
+    unsigned long size;
+    double padding;
 };
 
 

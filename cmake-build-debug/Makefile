@@ -175,33 +175,6 @@ recognization/fast:
 	$(MAKE) -f models/recognization/CMakeFiles/recognization.dir/build.make models/recognization/CMakeFiles/recognization.dir/build
 .PHONY : recognization/fast
 
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/face_platform.dir/build.make CMakeFiles/face_platform.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/face_platform.dir/build.make CMakeFiles/face_platform.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/face_platform.dir/build.make CMakeFiles/face_platform.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -215,9 +188,6 @@ help:
 	@echo "... data_preprocess"
 	@echo "... detection_alignment"
 	@echo "... recognization"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

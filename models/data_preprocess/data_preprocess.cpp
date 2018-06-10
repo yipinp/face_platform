@@ -29,6 +29,7 @@ void data_preprocess::reset(){
     params.scale_mode = 2; //cubic interpolation
     params.scale_ratio = Size(1,1);
     params.scale_size = Size(0,0);
+    params.count = 0;
 }
 
 /************************************************
@@ -36,13 +37,15 @@ void data_preprocess::reset(){
 ************************************************/
 void data_preprocess::set_scale_size(Size t){
     params.scale_size = t;
-    params.order = (params.order << MODE_BITS) | SCALE;
+    params.order |= (SCALE << MODE_BITS*params.count);
+    params.count ++;
 }
 
 void data_preprocess::set_scale_ratio(Size2d ratio)
 {
     params.scale_ratio = ratio;
-    params.order = (params.order << MODE_BITS) | SCALE;
+    params.order |= (SCALE << MODE_BITS*params.count);
+    params.count ++;
 
 }
 
@@ -60,8 +63,8 @@ Mat data_preprocess::image_scale(Mat frame_in) {
 
 void data_preprocess::set_crop_rect(Rect t){
     params.crop_rect = t;
-    params.order = (params.order << MODE_BITS) | CROP;
-
+    params.order |= (CROP << MODE_BITS*params.count);
+    params.count ++;
 }
 
 Mat data_preprocess::image_crop(Mat frame_in) {
@@ -71,8 +74,8 @@ Mat data_preprocess::image_crop(Mat frame_in) {
 
 void data_preprocess::set_image_flip(int flip_code){
     params.flipcode = flip_code;
-    params.order = (params.order << MODE_BITS) | FLIP;
-
+    params.order |= (FLIP << MODE_BITS*params.count);
+    params.count ++;
 }
 
 Mat data_preprocess::image_flip(Mat frame_in) {
@@ -97,15 +100,15 @@ bool data_preprocess::get_next_batch_images()
                 data_preprocess_queue_out->push(frame);
                 break;
             } else {
-                if (order & MODE_MASK == SCALE) {
+                if ((order & MODE_MASK) == SCALE) {
                     frame = image_scale(frame);
-                } else if (order & MODE_MASK == CROP) {
+                } else if ((order & MODE_MASK) == CROP) {
                     frame = image_crop(frame);
-                } else if (order & MODE_MASK == FLIP) {
+                } else if ((order & MODE_MASK) == FLIP) {
                     frame = image_flip(frame);
                 }
             }
-            order >= MODE_BITS;
+            order >>= MODE_BITS;
         }
     }
 
@@ -113,7 +116,20 @@ bool data_preprocess::get_next_batch_images()
 }
 
 
+//debug only
+void data_preprocess::dump_images() {
+    if(data_preprocess_queue_out == NULL) return;
 
+    std::queue<Mat> temp = *data_preprocess_queue_out;
+    char baseName[] = "./dumps/data_preprocess_dump";
+    char image_name[256];
+    for(int i =0; i < temp.size(); i ++)
+    {
+        sprintf(image_name,"%s_%d.jpg",baseName,i);
+        imwrite(image_name,temp.front());
+        temp.pop();
+    }
+}
 
 #if  0
 

@@ -5,7 +5,7 @@
 		<Option title="face_platform"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\models\;CMake Files\models\data_preprocess\;CMake Files\models\data_source\;CMake Files\models\detection_alignment\;CMake Files\models\recognization\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\dlib\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\dlib\;CMake Files\models\;CMake Files\models\data_source\;CMake Files\models\data_preprocess\;CMake Files\models\detection_alignment\;CMake Files\models\recognization\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/pyp/face_app/face_platform/cmake-build-debug"/>
@@ -90,19 +90,17 @@
 				</MakeCommands>
 			</Target>
 			<Target title="data_source">
-				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_source/data_source" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_source/libdata_source.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_source"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -115,19 +113,17 @@
 				</MakeCommands>
 			</Target>
 			<Target title="data_source/fast">
-				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_source/data_source" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_source/libdata_source.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_source"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -140,19 +136,17 @@
 				</MakeCommands>
 			</Target>
 			<Target title="data_preprocess">
-				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_preprocess/data_preprocess" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_preprocess/libdata_preprocess.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_preprocess"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -165,19 +159,17 @@
 				</MakeCommands>
 			</Target>
 			<Target title="data_preprocess/fast">
-				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_preprocess/data_preprocess" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_preprocess/libdata_preprocess.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/pyp/face_app/face_platform/cmake-build-debug/models/data_preprocess"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -190,20 +182,17 @@
 				</MakeCommands>
 			</Target>
 			<Target title="detection_alignment">
-				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/detection_alignment/detection_alignment" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/detection_alignment/libdetection_alignment.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/pyp/face_app/face_platform/cmake-build-debug/models/detection_alignment"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/home/pyp/anaconda3/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -216,20 +205,17 @@
 				</MakeCommands>
 			</Target>
 			<Target title="detection_alignment/fast">
-				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/detection_alignment/detection_alignment" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/detection_alignment/libdetection_alignment.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/pyp/face_app/face_platform/cmake-build-debug/models/detection_alignment"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/home/pyp/anaconda3/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -242,20 +228,17 @@
 				</MakeCommands>
 			</Target>
 			<Target title="recognization">
-				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/recognization/recognization" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/recognization/librecognization.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/pyp/face_app/face_platform/cmake-build-debug/models/recognization"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/home/pyp/anaconda3/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -268,20 +251,17 @@
 				</MakeCommands>
 			</Target>
 			<Target title="recognization/fast">
-				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/recognization/recognization" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/pyp/face_app/face_platform/cmake-build-debug/models/recognization/librecognization.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/pyp/face_app/face_platform/cmake-build-debug/models/recognization"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/home/pyp/anaconda3/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
@@ -294,47 +274,8 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/pyp/face_app/face_platform/main.cpp">
-			<Option target="face_platform"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/data_preprocess/data_preprocess.cpp">
-			<Option target="data_preprocess"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/data_preprocess/data_preprocess.h">
-			<Option target="data_preprocess"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/data_source/data_source.cpp">
-			<Option target="data_source"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/data_source/data_source.h">
-			<Option target="data_source"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/detection_alignment/detection_alignment.cpp">
-			<Option target="detection_alignment"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/detection_alignment/detection_alignment.h">
-			<Option target="detection_alignment"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/recognization/recognization.cpp">
-			<Option target="recognization"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/recognization/recognization.h">
-			<Option target="recognization"/>
-		</Unit>
 		<Unit filename="/home/pyp/face_app/face_platform/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/data_preprocess/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\models\data_preprocess\"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/data_source/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\models\data_source\"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/detection_alignment/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\models\detection_alignment\"/>
-		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/recognization/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\models\recognization\"/>
 		</Unit>
 		<Unit filename="/home/pyp/face_app/face_platform/../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\share\OpenCV\"/>
@@ -359,6 +300,18 @@
 		</Unit>
 		<Unit filename="/home/pyp/face_app/face_platform/../../../../usr/local/lib/cmake/dlib/dlibConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\dlib\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/data_source/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\models\data_source\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/data_preprocess/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\models\data_preprocess\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/detection_alignment/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\models\detection_alignment\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/recognization/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\models\recognization\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

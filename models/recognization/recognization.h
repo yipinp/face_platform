@@ -43,9 +43,8 @@ public:
 public:
     void dlib_load_model(char *name);
     void create_recognization(RECOGNIZATION_MODE  mode);
-
-private:
     void dlib_recognization();
+    void dump_face_features();
 
 
 private:

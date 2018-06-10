@@ -1,0 +1,15 @@
+/home/pyp/face_app/face_platform/CMakeFiles/rebuild_cache.dir
+/home/pyp/face_app/face_platform/CMakeFiles/edit_cache.dir
+/home/pyp/face_app/face_platform/CMakeFiles/face_platform.dir
+/home/pyp/face_app/face_platform/models/data_source/CMakeFiles/rebuild_cache.dir
+/home/pyp/face_app/face_platform/models/data_source/CMakeFiles/edit_cache.dir
+/home/pyp/face_app/face_platform/models/data_source/CMakeFiles/data_source.dir
+/home/pyp/face_app/face_platform/models/data_preprocess/CMakeFiles/rebuild_cache.dir
+/home/pyp/face_app/face_platform/models/data_preprocess/CMakeFiles/edit_cache.dir
+/home/pyp/face_app/face_platform/models/data_preprocess/CMakeFiles/data_preprocess.dir
+/home/pyp/face_app/face_platform/models/detection_alignment/CMakeFiles/rebuild_cache.dir
+/home/pyp/face_app/face_platform/models/detection_alignment/CMakeFiles/edit_cache.dir
+/home/pyp/face_app/face_platform/models/detection_alignment/CMakeFiles/detection_alignment.dir
+/home/pyp/face_app/face_platform/models/recognization/CMakeFiles/rebuild_cache.dir
+/home/pyp/face_app/face_platform/models/recognization/CMakeFiles/edit_cache.dir
+/home/pyp/face_app/face_platform/models/recognization/CMakeFiles/recognization.dir

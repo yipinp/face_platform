@@ -73,6 +73,7 @@ public:
     bool get_next_batch_images();
 
 
+    void dump_images();
 private:
     data_source_params params;
     std::queue<Mat> *data_source_queue_out;

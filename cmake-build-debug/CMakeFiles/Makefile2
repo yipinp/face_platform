@@ -63,10 +63,13 @@ CMAKE_BINARY_DIR = /home/pyp/face_app/face_platform/cmake-build-debug
 # Target rules for target CMakeFiles/face_platform.dir
 
 # All Build rule for target.
-CMakeFiles/face_platform.dir/all:
+CMakeFiles/face_platform.dir/all: models/data_source/CMakeFiles/data_source.dir/all
+CMakeFiles/face_platform.dir/all: models/data_preprocess/CMakeFiles/data_preprocess.dir/all
+CMakeFiles/face_platform.dir/all: models/detection_alignment/CMakeFiles/detection_alignment.dir/all
+CMakeFiles/face_platform.dir/all: models/recognization/CMakeFiles/recognization.dir/all
 	$(MAKE) -f CMakeFiles/face_platform.dir/build.make CMakeFiles/face_platform.dir/depend
 	$(MAKE) -f CMakeFiles/face_platform.dir/build.make CMakeFiles/face_platform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target face_platform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles --progress-num=1 "Built target face_platform"
 .PHONY : CMakeFiles/face_platform.dir/all
 
 # Include target in all.
@@ -76,7 +79,7 @@ all: CMakeFiles/face_platform.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/face_platform.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/face_platform.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/face_platform.dir/rule
@@ -121,7 +124,7 @@ models/data_source/preinstall:
 models/data_source/CMakeFiles/data_source.dir/all:
 	$(MAKE) -f models/data_source/CMakeFiles/data_source.dir/build.make models/data_source/CMakeFiles/data_source.dir/depend
 	$(MAKE) -f models/data_source/CMakeFiles/data_source.dir/build.make models/data_source/CMakeFiles/data_source.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target data_source"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles --progress-num= "Built target data_source"
 .PHONY : models/data_source/CMakeFiles/data_source.dir/all
 
 # Include target in all.
@@ -131,7 +134,7 @@ all: models/data_source/CMakeFiles/data_source.dir/all
 
 # Build rule for subdir invocation for target.
 models/data_source/CMakeFiles/data_source.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 models/data_source/CMakeFiles/data_source.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 0
 .PHONY : models/data_source/CMakeFiles/data_source.dir/rule
@@ -176,7 +179,7 @@ models/data_preprocess/preinstall:
 models/data_preprocess/CMakeFiles/data_preprocess.dir/all:
 	$(MAKE) -f models/data_preprocess/CMakeFiles/data_preprocess.dir/build.make models/data_preprocess/CMakeFiles/data_preprocess.dir/depend
 	$(MAKE) -f models/data_preprocess/CMakeFiles/data_preprocess.dir/build.make models/data_preprocess/CMakeFiles/data_preprocess.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target data_preprocess"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles --progress-num= "Built target data_preprocess"
 .PHONY : models/data_preprocess/CMakeFiles/data_preprocess.dir/all
 
 # Include target in all.
@@ -186,7 +189,7 @@ all: models/data_preprocess/CMakeFiles/data_preprocess.dir/all
 
 # Build rule for subdir invocation for target.
 models/data_preprocess/CMakeFiles/data_preprocess.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 models/data_preprocess/CMakeFiles/data_preprocess.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 0
 .PHONY : models/data_preprocess/CMakeFiles/data_preprocess.dir/rule
@@ -231,7 +234,7 @@ models/detection_alignment/preinstall:
 models/detection_alignment/CMakeFiles/detection_alignment.dir/all:
 	$(MAKE) -f models/detection_alignment/CMakeFiles/detection_alignment.dir/build.make models/detection_alignment/CMakeFiles/detection_alignment.dir/depend
 	$(MAKE) -f models/detection_alignment/CMakeFiles/detection_alignment.dir/build.make models/detection_alignment/CMakeFiles/detection_alignment.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target detection_alignment"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles --progress-num= "Built target detection_alignment"
 .PHONY : models/detection_alignment/CMakeFiles/detection_alignment.dir/all
 
 # Include target in all.
@@ -241,7 +244,7 @@ all: models/detection_alignment/CMakeFiles/detection_alignment.dir/all
 
 # Build rule for subdir invocation for target.
 models/detection_alignment/CMakeFiles/detection_alignment.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 models/detection_alignment/CMakeFiles/detection_alignment.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 0
 .PHONY : models/detection_alignment/CMakeFiles/detection_alignment.dir/rule
@@ -286,7 +289,7 @@ models/recognization/preinstall:
 models/recognization/CMakeFiles/recognization.dir/all:
 	$(MAKE) -f models/recognization/CMakeFiles/recognization.dir/build.make models/recognization/CMakeFiles/recognization.dir/depend
 	$(MAKE) -f models/recognization/CMakeFiles/recognization.dir/build.make models/recognization/CMakeFiles/recognization.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target recognization"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles --progress-num= "Built target recognization"
 .PHONY : models/recognization/CMakeFiles/recognization.dir/all
 
 # Include target in all.
@@ -296,7 +299,7 @@ all: models/recognization/CMakeFiles/recognization.dir/all
 
 # Build rule for subdir invocation for target.
 models/recognization/CMakeFiles/recognization.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 models/recognization/CMakeFiles/recognization.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pyp/face_app/face_platform/cmake-build-debug/CMakeFiles 0
 .PHONY : models/recognization/CMakeFiles/recognization.dir/rule

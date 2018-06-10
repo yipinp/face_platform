@@ -5,7 +5,7 @@
 		<Option title="detection_alignment"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\models\;CMake Files\models\data_preprocess\;CMake Files\models\data_source\;CMake Files\models\detection_alignment\;CMake Files\models\recognization\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\dlib\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\models\;CMake Files\models\detection_alignment\;CMake Files\models\data_source\;CMake Files\models\data_preprocess\;CMake Files\models\recognization\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\dlib\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/pyp/face_app/face_platform/cmake-build-debug/models/detection_alignment"/>
@@ -25,6 +25,11 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/home/pyp/face_app/face_platform/."/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/recognization"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/local/include/opencv"/>
 					<Add directory="/home/pyp/anaconda3/include"/>
@@ -51,6 +56,11 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/home/pyp/face_app/face_platform/."/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/recognization"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/local/include/opencv"/>
 					<Add directory="/home/pyp/anaconda3/include"/>
@@ -79,14 +89,14 @@
 		<Unit filename="/home/pyp/face_app/face_platform/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/data_preprocess/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\models\data_preprocess\"/>
+		<Unit filename="/home/pyp/face_app/face_platform/models/detection_alignment/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\models\detection_alignment\"/>
 		</Unit>
 		<Unit filename="/home/pyp/face_app/face_platform/models/data_source/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\models\data_source\"/>
 		</Unit>
-		<Unit filename="/home/pyp/face_app/face_platform/models/detection_alignment/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\models\detection_alignment\"/>
+		<Unit filename="/home/pyp/face_app/face_platform/models/data_preprocess/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\models\data_preprocess\"/>
 		</Unit>
 		<Unit filename="/home/pyp/face_app/face_platform/models/recognization/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\models\recognization\"/>

@@ -125,33 +125,6 @@ recognization/fast:
 	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/recognization/CMakeFiles/recognization.dir/build.make models/recognization/CMakeFiles/recognization.dir/build
 .PHONY : recognization/fast
 
-recognization.o: recognization.cpp.o
-
-.PHONY : recognization.o
-
-# target to build an object file
-recognization.cpp.o:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/recognization/CMakeFiles/recognization.dir/build.make models/recognization/CMakeFiles/recognization.dir/recognization.cpp.o
-.PHONY : recognization.cpp.o
-
-recognization.i: recognization.cpp.i
-
-.PHONY : recognization.i
-
-# target to preprocess a source file
-recognization.cpp.i:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/recognization/CMakeFiles/recognization.dir/build.make models/recognization/CMakeFiles/recognization.dir/recognization.cpp.i
-.PHONY : recognization.cpp.i
-
-recognization.s: recognization.cpp.s
-
-.PHONY : recognization.s
-
-# target to generate assembly for a file
-recognization.cpp.s:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/recognization/CMakeFiles/recognization.dir/build.make models/recognization/CMakeFiles/recognization.dir/recognization.cpp.s
-.PHONY : recognization.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,9 +134,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... recognization"
-	@echo "... recognization.o"
-	@echo "... recognization.i"
-	@echo "... recognization.s"
 .PHONY : help
 
 

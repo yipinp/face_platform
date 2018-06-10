@@ -41,6 +41,7 @@ typedef struct {
 
     //pipeline order
     unsigned char order;// 2bit for one stage, lsb first
+    unsigned char count;
 
 } data_preprocess_params;
 
@@ -66,6 +67,8 @@ public:
 
     //core
     bool get_next_batch_images();
+
+    void dump_images();
 
 private:
     void reset();

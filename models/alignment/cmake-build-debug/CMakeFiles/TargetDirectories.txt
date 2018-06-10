@@ -1,0 +1,3 @@
+/home/pyp/face_app/face_platform/models/alignment/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pyp/face_app/face_platform/models/alignment/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/pyp/face_app/face_platform/models/alignment/cmake-build-debug/CMakeFiles/alignment.dir

@@ -125,33 +125,6 @@ data_preprocess/fast:
 	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/data_preprocess/CMakeFiles/data_preprocess.dir/build.make models/data_preprocess/CMakeFiles/data_preprocess.dir/build
 .PHONY : data_preprocess/fast
 
-data_preprocess.o: data_preprocess.cpp.o
-
-.PHONY : data_preprocess.o
-
-# target to build an object file
-data_preprocess.cpp.o:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/data_preprocess/CMakeFiles/data_preprocess.dir/build.make models/data_preprocess/CMakeFiles/data_preprocess.dir/data_preprocess.cpp.o
-.PHONY : data_preprocess.cpp.o
-
-data_preprocess.i: data_preprocess.cpp.i
-
-.PHONY : data_preprocess.i
-
-# target to preprocess a source file
-data_preprocess.cpp.i:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/data_preprocess/CMakeFiles/data_preprocess.dir/build.make models/data_preprocess/CMakeFiles/data_preprocess.dir/data_preprocess.cpp.i
-.PHONY : data_preprocess.cpp.i
-
-data_preprocess.s: data_preprocess.cpp.s
-
-.PHONY : data_preprocess.s
-
-# target to generate assembly for a file
-data_preprocess.cpp.s:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/data_preprocess/CMakeFiles/data_preprocess.dir/build.make models/data_preprocess/CMakeFiles/data_preprocess.dir/data_preprocess.cpp.s
-.PHONY : data_preprocess.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,9 +134,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... data_preprocess"
-	@echo "... data_preprocess.o"
-	@echo "... data_preprocess.i"
-	@echo "... data_preprocess.s"
 .PHONY : help
 
 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc librecognization.a  CMakeFiles/recognization.dir/recognization.cpp.o
+/usr/bin/ranlib librecognization.a

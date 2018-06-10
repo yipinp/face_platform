@@ -125,33 +125,6 @@ data_source/fast:
 	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/data_source/CMakeFiles/data_source.dir/build.make models/data_source/CMakeFiles/data_source.dir/build
 .PHONY : data_source/fast
 
-data_source.o: data_source.cpp.o
-
-.PHONY : data_source.o
-
-# target to build an object file
-data_source.cpp.o:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/data_source/CMakeFiles/data_source.dir/build.make models/data_source/CMakeFiles/data_source.dir/data_source.cpp.o
-.PHONY : data_source.cpp.o
-
-data_source.i: data_source.cpp.i
-
-.PHONY : data_source.i
-
-# target to preprocess a source file
-data_source.cpp.i:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/data_source/CMakeFiles/data_source.dir/build.make models/data_source/CMakeFiles/data_source.dir/data_source.cpp.i
-.PHONY : data_source.cpp.i
-
-data_source.s: data_source.cpp.s
-
-.PHONY : data_source.s
-
-# target to generate assembly for a file
-data_source.cpp.s:
-	cd /home/pyp/face_app/face_platform/cmake-build-debug && $(MAKE) -f models/data_source/CMakeFiles/data_source.dir/build.make models/data_source/CMakeFiles/data_source.dir/data_source.cpp.s
-.PHONY : data_source.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,9 +134,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... data_source"
-	@echo "... data_source.o"
-	@echo "... data_source.i"
-	@echo "... data_source.s"
 .PHONY : help
 
 

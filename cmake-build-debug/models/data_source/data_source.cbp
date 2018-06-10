@@ -25,6 +25,11 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/home/pyp/face_app/face_platform/."/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/recognization"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/local/include/opencv"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -50,6 +55,11 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/home/pyp/face_app/face_platform/."/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/./models/recognization"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/local/include/opencv"/>
 					<Add directory="/usr/include/c++/5"/>

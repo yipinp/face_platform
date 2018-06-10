@@ -1,0 +1,8 @@
+/home/pyp/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/pyp/face_app/face_platform/models/recognization
+-- OpenCV library status:
+--     version: 4.0.0
+--     libraries: opencv_ml;opencv_features2d;opencv_cudaimgproc;opencv_cudaoptflow;opencv_calib3d;opencv_shape;opencv_cudev;opencv_video;opencv_stitching;opencv_cudafeatures2d;opencv_cudabgsegm;opencv_imgcodecs;opencv_cudastereo;opencv_core;opencv_flann;opencv_cudawarping;opencv_cudafilters;opencv_highgui;opencv_dnn;opencv_world;opencv_objdetect;opencv_photo;opencv_cudaobjdetect;opencv_cudacodec;opencv_videostab;opencv_videoio;opencv_superres;opencv_cudaarithm;opencv_cudalegacy;opencv_imgproc;opencv_dpm;opencv_bioinspired;opencv_tracking;opencv_fuzzy;opencv_reg;opencv_dnn_objdetect;opencv_rgbd;opencv_xobjdetect;opencv_xfeatures2d;opencv_img_hash;opencv_aruco;opencv_bgsegm;opencv_xphoto;opencv_stereo;opencv_phase_unwrapping;opencv_text;opencv_ccalib;opencv_datasets;opencv_face;opencv_hdf;opencv_hfs;opencv_ximgproc;opencv_line_descriptor;opencv_plot;opencv_saliency;opencv_freetype;opencv_structured_light;opencv_surface_matching;opencv_optflow
+--     include path: /usr/local/include;/usr/local/include/opencv
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/pyp/face_app/face_platform/models/recognization/cmake-build-debug
