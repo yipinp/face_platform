@@ -1,0 +1,15 @@
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/CMakeFiles/face_api.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/CMakeFiles/rebuild_cache.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/CMakeFiles/edit_cache.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/CMakeFiles/data_source.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/CMakeFiles/rebuild_cache.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/CMakeFiles/edit_cache.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/CMakeFiles/data_preprocess.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/CMakeFiles/rebuild_cache.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/CMakeFiles/edit_cache.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/CMakeFiles/detection_alignment.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/CMakeFiles/rebuild_cache.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/CMakeFiles/edit_cache.dir
+/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/CMakeFiles/recognization.dir

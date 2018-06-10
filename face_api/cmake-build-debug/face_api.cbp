@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="face_api"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\models\;CMake Files\..\models\data_preprocess\;CMake Files\..\models\data_source\;CMake Files\..\models\detection_alignment\;CMake Files\..\models\recognization\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\dlib\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="face_api">
+				<Option output="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/face_api" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/."/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/recognization"/>
+					<Add directory="/home/pyp/anaconda3/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 face_api"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="face_api/fast">
+				<Option output="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/face_api" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/."/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/recognization"/>
+					<Add directory="/home/pyp/anaconda3/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 face_api/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="data_source">
+				<Option output="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/libdata_source.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/."/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/recognization"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/Makefile&quot;  VERBOSE=1 data_source"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="data_source/fast">
+				<Option output="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/libdata_source.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/."/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/recognization"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/Makefile&quot;  VERBOSE=1 data_source/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_source.out/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="data_preprocess">
+				<Option output="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/libdata_preprocess.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/."/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/recognization"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/Makefile&quot;  VERBOSE=1 data_preprocess"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="data_preprocess/fast">
+				<Option output="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/libdata_preprocess.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/."/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/recognization"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/Makefile&quot;  VERBOSE=1 data_preprocess/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/data_preprocess.out/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="detection_alignment">
+				<Option output="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/libdetection_alignment.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/."/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/recognization"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/Makefile&quot;  VERBOSE=1 detection_alignment"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="detection_alignment/fast">
+				<Option output="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/libdetection_alignment.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/."/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/recognization"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/Makefile&quot;  VERBOSE=1 detection_alignment/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/detection_alignment.out/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="recognization">
+				<Option output="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/librecognization.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/."/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/recognization"/>
+					<Add directory="/home/pyp/anaconda3/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/Makefile&quot;  VERBOSE=1 recognization"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="recognization/fast">
+				<Option output="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/librecognization.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/."/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_source"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/data_preprocess"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/detection_alignment"/>
+					<Add directory="/home/pyp/face_app/face_platform/face_api/../models/recognization"/>
+					<Add directory="/home/pyp/anaconda3/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/Makefile&quot;  VERBOSE=1 recognization/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pyp/face_app/face_platform/face_api/cmake-build-debug/recognization.out/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/face_api.cpp">
+			<Option target="face_api"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/face_api.h">
+			<Option target="face_api"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/main.cpp">
+			<Option target="face_api"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/data_preprocess/data_preprocess.cpp">
+			<Option target="data_preprocess"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/data_preprocess/data_preprocess.h">
+			<Option target="data_preprocess"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/data_source/data_source.cpp">
+			<Option target="data_source"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/data_source/data_source.h">
+			<Option target="data_source"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/detection_alignment/detection_alignment.cpp">
+			<Option target="detection_alignment"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/detection_alignment/detection_alignment.h">
+			<Option target="detection_alignment"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/recognization/recognization.cpp">
+			<Option target="recognization"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/models/recognization/recognization.h">
+			<Option target="recognization"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../models/data_preprocess/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\models\data_preprocess\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../models/data_source/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\models\data_source\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../models/detection_alignment/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\models\detection_alignment\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../models/recognization/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\models\recognization\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../../../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../../../../../usr/local/lib/cmake/dlib/dlib-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\dlib\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../../../../../usr/local/lib/cmake/dlib/dlib.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\dlib\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../../../../../usr/local/lib/cmake/dlib/dlibConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\dlib\"/>
+		</Unit>
+		<Unit filename="/home/pyp/face_app/face_platform/face_api/../../../../../usr/local/lib/cmake/dlib/dlibConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\dlib\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
