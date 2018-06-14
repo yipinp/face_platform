@@ -68,7 +68,7 @@ public:
     //core
     bool get_next_batch_images();
 
-    void dump_images();
+    void dump_images(char *baseName);
 
 private:
     void reset();

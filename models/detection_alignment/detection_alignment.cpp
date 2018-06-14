@@ -119,15 +119,14 @@ void detection_alignment::face_detection_alignment()
     }
 }
 
-void detection_alignment::dump_images() {
+void detection_alignment::dump_images(char *baseName) {
     if(face_queue_out == NULL) return;
 
     std::queue<Mat> temp = *face_queue_out;
-    char baseName[] = "./dumps/detection_alignment_dump";
     char image_name[256];
     for(int i =0; i < temp.size(); i ++)
     {
-        sprintf(image_name,"%s_%d.jpg",baseName,i);
+        sprintf(image_name,"%s_detect_%d.jpg",baseName,i);
         imwrite(image_name,temp.front());
         temp.pop();
     }

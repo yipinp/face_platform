@@ -95,15 +95,14 @@ bool data_source::get_next_batch_images() {
 
 
 //debug only
-void data_source::dump_images() {
+void data_source::dump_images(char *baseName) {
     if(data_source_queue_out == NULL) return;
 
     std::queue<Mat> temp = *data_source_queue_out;
-    char baseName[] = "./dumps/data_source_dump";
     char image_name[256];
     for(int i =0; i < temp.size(); i ++)
     {
-        sprintf(image_name,"%s_%d.jpg",baseName,i);
+        sprintf(image_name,"%s_source_%d.jpg",baseName,i);
         imwrite(image_name,temp.front());
         temp.pop();
     }

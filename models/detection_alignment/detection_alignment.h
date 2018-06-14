@@ -42,7 +42,7 @@ public:
     void dlib_load_model(char *name);
     void dlib_set_detector(FACE_DETECTOR_S detector,unsigned long size_i = 0, double padding_i = 0);
     void face_detection_alignment();
-    void dump_images();
+    void dump_images(char *baseName);
 
 private:
     bool dlib_face_detection_alignment(Mat image);

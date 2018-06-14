@@ -71,15 +71,14 @@ void recognization::dlib_recognization()
 
 }
 
-void recognization::dump_face_features() {
+void recognization::dump_face_features(char *baseName) {
     if(face_id == NULL) return;
 
     std::vector<matrix<float,0,1>> temp = *face_id;
-    char baseName[] = "./dumps/recognization_dump";
     char image_name[256];
     for(int i =0; i < temp.size(); i ++)
     {
-        sprintf(image_name,"%s_%d.txt",baseName,i);
+        sprintf(image_name,"%s_rec_%d.txt",baseName,i);
         cout<<temp[i]<<endl;
     }
 }

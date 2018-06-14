@@ -34,25 +34,36 @@ typedef enum {
 
 class face_api {
 public:
-    face_api(){};
+    face_api();
+    ~face_api();
 
 
 
 public:
     void set_input_source(string image_file);
-    void select_face_model(FACE_MODEL model);
+    void set_face_model(FACE_MODEL model);
 
     void get_face_ids();
     void compare_two_faces();
 
 private:
-    void dlib_dnn_face_model();
+    void setup_face_model();
+    void dlib_run_one_image();
 
 private:
     string face_image;
     std::queue<Mat> data_source_queue_out; //data source out to next pipeline
     std::queue<Mat> data_preprocess_queue_out; // data preprocess output
     std::queue<Mat> data_alignment_queue_out; // data alignment output
+
+     //data source
+    data_source  *data_source_module;
+    //data preprocess
+    data_preprocess  *data_preprocess_module;
+    //detection and alignment
+    detection_alignment *detector_module;
+     //recognization
+    recognization *recognization_module;
 
     FACE_MODEL face_model;
 public:
