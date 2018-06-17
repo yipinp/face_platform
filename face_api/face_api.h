@@ -29,6 +29,7 @@
 #include <dlib/clustering.h>
 #include <dlib/string.h>
 #include <dlib/image_io.h>
+#include <dlib/sqlite.h>
 
 typedef enum {
     DLIB_DNN,
@@ -53,10 +54,17 @@ public:
     void get_face_ids();
     void compare_two_faces();
 
+    //database
+    void set_database(string face_database_name);
+    bool insert_face_to_database(string user_name, matrix<float, 0, 1> face_id);
+    bool match_face_in_database(matrix<float, 0, 1> face_id,double threshold);
+
+
 private:
     void setup_face_model();
     void dlib_run_one_image();
     void dlib_face_model();
+    bool table_exists ( database& db, const std::string& tablename);
 
 private:
     string face_image;
@@ -76,6 +84,8 @@ private:
     FACE_MODEL face_model;
 
     bool high_quality;
+
+    database face_db;
 public:
     std::vector<matrix<float,0,1>> face_id_out; // face id output
 };

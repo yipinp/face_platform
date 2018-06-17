@@ -67,6 +67,8 @@ dlib/string.h
 -
 dlib/image_io.h
 -
+dlib/sqlite.h
+-
 
 /home/pyp/face_app/face_platform/face_api/main.cpp
 iostream

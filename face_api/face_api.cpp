@@ -127,3 +127,84 @@ void face_api::dlib_run_one_image() {
 }
 
 
+/*
+ *   database API
+ */
+bool face_api::table_exists(database& db, const std::string& tablename)
+{
+    // Sometimes you want to just run a query that returns one thing.  In this case, we
+    // want to see how many tables are in our database with the given tablename.  The only
+    // possible outcomes are 1 or 0 and we can do this by looking in the special
+    // sqlite_master table that records such database metadata.  For these kinds of "one
+    // result" queries we can use the query_int() method which executes a SQL statement
+    // against a database and returns the result as an int.
+    return query_int(db, "select count(*) from sqlite_master where name = '"+tablename+"'")==1;
+}
+
+
+void face_api::set_database(string face_database_name)
+{
+
+     face_db.open(face_database_name);
+
+    // Create a people table that records a person's name, age, and their "data".
+    if (!table_exists(face_db,"user_face"))
+        face_db.exec("create table user_face (username, user_face_id)");
+
+}
+
+
+
+bool face_api::insert_face_to_database(string face_name, matrix<float, 0, 1> face_id)
+{
+    bool found = false;
+    statement st(face_db, "insert into user_face VALUES(?,?)");
+    statement st2(face_db, "select * from user_face");
+    st2.exec();
+    while (st2.move_next()) {
+        string name;
+        st2.get_column(0, name);
+        if (name == face_name) {
+            found = true;
+            return found;
+        }
+    }
+
+    if (!found) {
+        cout<<"no same name is in the database, insert it to database"<<endl;
+        st.bind(1, face_name);
+        st.bind(2, face_id);
+        st.exec();
+        transaction my_trans(face_db);
+        my_trans.commit();
+    } else{
+        cout<<"The same name is already in the database, skip it"<<endl;
+
+    }
+    return found;
+}
+
+
+bool face_api::match_face_in_database(matrix<float, 0, 1> face_id, double threshold)
+{
+    bool matched = false;
+    double diff = 0;
+
+    matrix<float, 0, 1> face_id_data;
+    statement st2(face_db, "select * from user_face");
+    st2.exec();
+    while (st2.move_next()) {
+        string name;
+        st2.get_column(1, face_id_data);
+        diff = length(face_id_data-face_id);
+        cout<<diff<<endl;
+        matched = diff < threshold;
+        if (matched) {
+            st2.get_column(0, name);
+            cout<<"Find the matched user:" << name <<", distance:" << diff <<endl;
+            return true;
+        }
+    }
+    cout<<"no user is found in the database" << endl;
+    return false;
+}
