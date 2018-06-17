@@ -13,7 +13,7 @@ recognization::recognization(std::queue<cv::Mat> *img_faces_in, std::vector<matr
                 : img_faces(img_faces_in),
                   face_id(face_id_out)
 {
-
+    high_quality_mode = false;
 
 }
 
@@ -53,6 +53,8 @@ void recognization::create_recognization(RECOGNIZATION_MODE  mode)
 
 void recognization::dlib_recognization()
 {
+    std::vector<matrix<float, 0, 1>> face_descriptors;
+
     //read the face chips from detection and alignment and covert to dlib matrix
     std::vector<matrix<dlib::rgb_pixel>> faces;
     matrix<dlib::rgb_pixel> img;
@@ -64,7 +66,19 @@ void recognization::dlib_recognization()
         faces.push_back(move(img));
     }
 
-    std::vector<matrix<float,0,1>> face_descriptors = dlib_net(faces);
+    if(high_quality_mode) {
+        //add jitter image
+        for(int i = 0; i < faces.size(); i++){
+            matrix<dlib::rgb_pixel> single_face;
+            single_face = faces[i];
+            face_descriptors.push_back(mean(mat(dlib_net(jitter_image(single_face)))));
+        }
+
+    } else {
+
+        face_descriptors = dlib_net(faces);
+    }
+
     for (int i = 0; i < face_descriptors.size(); i++){
         face_id->push_back(face_descriptors[i]);
     }
@@ -81,10 +95,29 @@ void recognization::dump_face_features(char *baseName) {
         sprintf(image_name,"%s_rec_%d.txt",baseName,i);
         cout<<temp[i]<<endl;
     }
+
 }
 
 
+std::vector<matrix<rgb_pixel>> recognization::jitter_image(
+        const matrix<rgb_pixel>& img
+)
+{
+    // All this function does is make 100 copies of img, all slightly jittered by being
+    // zoomed, rotated, and translated a little bit differently. They are also randomly
+    // mirrored left to right.
+    thread_local dlib::rand rnd;
 
+    std::vector<matrix<rgb_pixel>> crops;
+    for (int i = 0; i < 100; ++i)
+        crops.push_back(dlib::jitter_image(img,rnd));
+
+    return crops;
+}
+
+void recognization::set_high_quality(){
+      high_quality_mode = true;
+}
 
 
 #if 0

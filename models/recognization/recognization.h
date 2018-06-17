@@ -45,13 +45,18 @@ public:
     void create_recognization(RECOGNIZATION_MODE  mode);
     void dlib_recognization();
     void dump_face_features(char *baseName);
+    void set_high_quality();
 
-
+private:
+    std::vector<matrix<rgb_pixel>> jitter_image(
+            const matrix<rgb_pixel>& img
+    );
 private:
     std::queue<Mat> *img_faces;
     std::vector<matrix<float,0,1>> *face_id;
     anet_type dlib_net;
     char dlib_model_name[256];
+    bool high_quality_mode;
 
 };
 #endif

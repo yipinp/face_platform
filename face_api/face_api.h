@@ -24,6 +24,12 @@
 #include "../models/detection_alignment/detection_alignment.h"
 #include "../models/recognization/recognization.h"
 
+#include <dlib/dnn.h>
+#include <dlib/gui_widgets.h>
+#include <dlib/clustering.h>
+#include <dlib/string.h>
+#include <dlib/image_io.h>
+
 typedef enum {
     DLIB_DNN,
 
@@ -42,6 +48,7 @@ public:
 public:
     void set_input_source(string image_file);
     void set_face_model(FACE_MODEL model);
+    void set_high_quality();
 
     void get_face_ids();
     void compare_two_faces();
@@ -49,6 +56,7 @@ public:
 private:
     void setup_face_model();
     void dlib_run_one_image();
+    void dlib_face_model();
 
 private:
     string face_image;
@@ -66,6 +74,8 @@ private:
     recognization *recognization_module;
 
     FACE_MODEL face_model;
+
+    bool high_quality;
 public:
     std::vector<matrix<float,0,1>> face_id_out; // face id output
 };

@@ -835,6 +835,7 @@ CMakeFiles/face_api.dir/face_api.cpp.o: /usr/local/include/opencv2/videostab/sta
 CMakeFiles/face_api.dir/face_api.cpp.o: /usr/local/include/opencv2/videostab/wobble_suppression.hpp
 CMakeFiles/face_api.dir/face_api.cpp.o: /usr/local/include/opencv2/xfeatures2d/cuda.hpp
 
+CMakeFiles/face_api.dir/main.cpp.o: /home/pyp/anaconda3/include/sqlite3.h
 CMakeFiles/face_api.dir/main.cpp.o: ../face_api.h
 CMakeFiles/face_api.dir/main.cpp.o: ../main.cpp
 CMakeFiles/face_api.dir/main.cpp.o: /home/pyp/face_app/face_platform/models/data_preprocess/data_preprocess.h
@@ -1327,10 +1328,21 @@ CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/sliding_buffer/circu
 CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/sliding_buffer/sliding_buffer_kernel_1.h
 CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/sliding_buffer/sliding_buffer_kernel_abstract.h
 CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/sliding_buffer/sliding_buffer_kernel_c.h
+CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/smart_pointers.h
+CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/smart_pointers/scoped_ptr.h
+CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/smart_pointers/shared_ptr.h
+CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/smart_pointers/shared_ptr_abstract.h
 CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/smart_pointers/shared_ptr_thread_safe.h
 CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/smart_pointers/shared_ptr_thread_safe_abstract.h
+CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/smart_pointers/weak_ptr.h
+CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/smart_pointers/weak_ptr_abstract.h
 CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/sort.h
 CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/sparse_vector.h
+CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/sqlite.h
+CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/sqlite/sqlite.h
+CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/sqlite/sqlite_abstract.h
+CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/sqlite/sqlite_tools.h
+CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/sqlite/sqlite_tools_abstract.h
 CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/stack_trace.h
 CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/statistics.h
 CMakeFiles/face_api.dir/main.cpp.o: /usr/local/include/dlib/statistics/average_precision.h

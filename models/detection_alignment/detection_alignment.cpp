@@ -54,9 +54,9 @@ void detection_alignment::dlib_set_detector(FACE_DETECTOR_S detector,unsigned lo
 bool detection_alignment::dlib_face_detection_alignment(Mat image)
 {
     dlib::array2d<rgb_pixel> dlib_img;
-    dlib::assign_image(dlib_img, dlib::cv_image<bgr_pixel>(image));
+    dlib::assign_image(dlib_img, dlib::cv_image<rgb_pixel>(image));
 
-    pyramid_up(dlib_img);
+   // pyramid_up(dlib_img);
     frontal_face_detector detector = get_frontal_face_detector();
     shape_predictor sp;
     deserialize(dlib_model_name) >> sp;
