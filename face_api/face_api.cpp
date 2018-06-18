@@ -6,6 +6,7 @@ face_api::face_api()
 
     setup_face_model();
     high_quality = false;
+    face_image = "";
 }
 
 
@@ -53,14 +54,6 @@ void face_api::get_face_ids()
 }
 
 
-void face_api::compare_two_faces()
-{
-
-
-
-
-
-}
 
 /*
  * PRIVATE Functions
@@ -104,7 +97,10 @@ void face_api::dlib_face_model(){
 void face_api::dlib_run_one_image() {
     char baseName[] = "/home/pyp/face_app/face_platform/dumps/dump";
     //data source
-    data_source_module->set_image_file(face_image);
+    if(face_image != "")
+        data_source_module->set_image_file(face_image);
+    else
+        data_source_module->set_camera_id(-1);
     data_source_module->get_next_batch_images();
     data_source_module->dump_images(baseName);
 

@@ -52,7 +52,6 @@ public:
     void set_high_quality();
 
     void get_face_ids();
-    void compare_two_faces();
 
     //database
     void set_database(string face_database_name);
